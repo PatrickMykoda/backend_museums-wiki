@@ -1,7 +1,7 @@
-import { ArtistEntity } from "src/artist/artist.entity/artist.entity";
-import { ExhibitionEntity } from "src/exhibition/exhibition.entity/exhibition.entity";
-import { ImageEntity } from "src/image/image.entity/image.entity";
-import { MuseumEntity } from "src/museum/museum.entity/museum.entity";
+import { ArtistEntity } from "../../artist/artist.entity/artist.entity";
+import { ExhibitionEntity } from "../../exhibition/exhibition.entity/exhibition.entity";
+import { ImageEntity } from "../../image/image.entity/image.entity";
+import { MuseumEntity } from "../../museum/museum.entity/museum.entity";
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()

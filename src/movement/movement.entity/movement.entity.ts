@@ -1,5 +1,5 @@
-import { ArtistEntity } from 'src/artist/artist.entity/artist.entity';
-import { Column, Entity, PrimaryGeneratedColumn, ManyToMany } from 'typeorm'
+import { ArtistEntity } from '../../artist/artist.entity/artist.entity';
+import { Column, Entity, PrimaryGeneratedColumn, ManyToMany, JoinTable } from 'typeorm'
 
 @Entity()
 export class MovementEntity {
@@ -16,5 +16,6 @@ export class MovementEntity {
     countryOfOrigin: string;
 
     @ManyToMany(()=> ArtistEntity, artist => artist.movements)
+    @JoinTable()
     artists: ArtistEntity[];
 }

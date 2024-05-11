@@ -1,4 +1,4 @@
-import { ArtworkEntity } from 'src/artwork/artwork.entity/artwork.entity';
+import { ArtworkEntity } from '../../artwork/artwork.entity/artwork.entity';
 import {Column, Entity, PrimaryGeneratedColumn, ManyToOne } from 'typeorm'
 
 @Entity()

@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { ArtworkEntity } from "src/artwork/artwork.entity/artwork.entity";
-import { ExhibitionEntity } from "src/exhibition/exhibition.entity/exhibition.entity";
+import { ArtworkEntity } from "../../artwork/artwork.entity/artwork.entity";
+import { ExhibitionEntity } from "../../exhibition/exhibition.entity/exhibition.entity";
 
 @Entity()
 export class MuseumEntity {

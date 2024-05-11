@@ -1,4 +1,4 @@
-import { ExhibitionEntity } from "src/exhibition/exhibition.entity/exhibition.entity";
+import { ExhibitionEntity } from "../../exhibition/exhibition.entity/exhibition.entity";
 import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()

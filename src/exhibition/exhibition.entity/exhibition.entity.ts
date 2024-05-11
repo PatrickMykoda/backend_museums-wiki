@@ -1,6 +1,6 @@
-import { ArtworkEntity } from "src/artwork/artwork.entity/artwork.entity";
-import { MuseumEntity } from "src/museum/museum.entity/museum.entity";
-import { SponsorEntity } from "src/sponsor/sponsor.entity/sponsor.entity";
+import { ArtworkEntity } from "../../artwork/artwork.entity/artwork.entity";
+import { MuseumEntity } from "../../museum/museum.entity/museum.entity";
+import { SponsorEntity } from "../../sponsor/sponsor.entity/sponsor.entity";
 import { Column, Entity, PrimaryGeneratedColumn, ManyToOne, OneToMany, OneToOne, JoinColumn } from "typeorm";
 
 @Entity()
