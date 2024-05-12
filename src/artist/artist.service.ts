@@ -38,7 +38,6 @@ export class ArtistService {
         const artist: ArtistEntity = await this.artistRepository.findOne({where: {id}});
         if (!artist)
             throw new BusinessLogicException("The artist with the given id was not found", BusinessError.NOT_FOUND);
-        console.log("This is the found artist: ", artist)
         await this.artistRepository.remove(artist);
     }
 }
