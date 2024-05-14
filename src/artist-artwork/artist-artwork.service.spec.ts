@@ -146,7 +146,7 @@ describe('ArtistArtworkService', () => {
     await expect(() => service.findArtworksByArtistId("0")).rejects.toHaveProperty("message", "The artist with the given id was not found");
   });
 
-  it('associateArtworksMuseum should update the artwork list for an artist', async() => {
+  it('associateArtworksArtist should update the artwork list for an artist', async() => {
     const newArtwork: ArtworkEntity = await artworkRepository.save({
       name: faker.music.songName(),
       year: Math.floor(Math.random() * (2025)),
@@ -165,7 +165,7 @@ describe('ArtistArtworkService', () => {
     expect(updatedArtist.artworks[0].mainImage).toBe(newArtwork.mainImage);
   });
 
-  it('associateArtworksMuseum should should throw an error for an invalid artist', async() => {
+  it('associateArtworksArtist should should throw an error for an invalid artist', async() => {
     const newArtwork: ArtworkEntity = await artworkRepository.save({
       name: faker.music.songName(),
       year: Math.floor(Math.random() * (2025)),
@@ -177,7 +177,7 @@ describe('ArtistArtworkService', () => {
     await expect(() => service.associateArtworksArtist("0", [newArtwork])).rejects.toHaveProperty("message", "The artist with the given id was not found");
   });
 
-  it('associateArtworksMuseum should throw an error for an invalid artwork', async() => {
+  it('associateArtworksArtist should throw an error for an invalid artwork', async() => {
     const newArtwork: ArtworkEntity = artworkList[0];
     newArtwork.id = "0";
     await expect(() => service.associateArtworksArtist(artist.id, [newArtwork])).rejects.toHaveProperty("message", "The artwork with the given id was not found");
