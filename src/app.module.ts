@@ -12,9 +12,10 @@ import { MuseumArtworkModule } from './museum-artwork/museum-artwork.module';
 import { ArtistArtworkModule } from './artist-artwork/artist-artwork.module';
 import { MovementArtistModule } from './movement-artist/movement-artist.module';
 import { ExhibitionArtworkModule } from './exhibition-artwork/exhibition-artwork.module';
+import { ArtworkImageModule } from './artwork-image/artwork-image.module';
 
 @Module({
-  imports: [MuseumModule, ExhibitionModule, ArtworkModule, ArtistModule, SponsorModule, ImageModule, MovementModule, MuseumArtworkModule, ArtistArtworkModule, MovementArtistModule, ExhibitionArtworkModule],
+  imports: [MuseumModule, ExhibitionModule, ArtworkModule, ArtistModule, SponsorModule, ImageModule, MovementModule, MuseumArtworkModule, ArtistArtworkModule, MovementArtistModule, ExhibitionArtworkModule, ArtworkImageModule],
   controllers: [AppController],
   providers: [AppService],
 })
