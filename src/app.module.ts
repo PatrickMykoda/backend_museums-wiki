@@ -9,9 +9,10 @@ import { SponsorModule } from './sponsor/sponsor.module';
 import { ImageModule } from './image/image.module';
 import { MovementModule } from './movement/movement.module';
 import { MuseumArtworkModule } from './museum-artwork/museum-artwork.module';
+import { ArtistArtworkModule } from './artist-artwork/artist-artwork.module';
 
 @Module({
-  imports: [MuseumModule, ExhibitionModule, ArtworkModule, ArtistModule, SponsorModule, ImageModule, MovementModule, MuseumArtworkModule],
+  imports: [MuseumModule, ExhibitionModule, ArtworkModule, ArtistModule, SponsorModule, ImageModule, MovementModule, MuseumArtworkModule, ArtistArtworkModule],
   controllers: [AppController],
   providers: [AppService],
 })
