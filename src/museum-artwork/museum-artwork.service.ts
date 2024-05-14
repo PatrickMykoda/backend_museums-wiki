@@ -16,7 +16,7 @@ export class MuseumArtworkService {
         private readonly artworkRepository: Repository<ArtworkEntity>
     ){}
 
-    async addArtworkMuseum(artworkId: string, museumId: string): Promise<MuseumEntity> {
+    async addArtworkMuseum(museumId: string, artworkId: string): Promise<MuseumEntity> {
         const artwork: ArtworkEntity = await this.artworkRepository.findOne({where: {id: artworkId}});
         if(!artwork)
             throw new BusinessLogicException("The artwork with the given id was not found", BusinessError.NOT_FOUND);
@@ -29,7 +29,7 @@ export class MuseumArtworkService {
         return await this.museumRepository.save(museum);
     }
 
-    async findArtworkByMuseumIdArtworkId(artworkId: string, museumId: string): Promise<ArtworkEntity>{
+    async findArtworkByMuseumIdArtworkId(museumId: string, artworkId: string): Promise<ArtworkEntity>{
         const artwork: ArtworkEntity = await this.artworkRepository.findOne({where: {id: artworkId}});
         if(!artwork)
             throw new BusinessLogicException("The artwork with the given id was not found", BusinessError.NOT_FOUND);

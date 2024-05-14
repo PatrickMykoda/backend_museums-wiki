@@ -73,7 +73,7 @@ describe('MuseumArtworkService', () => {
       image: faker.image.url()
     })
 
-    const result: MuseumEntity = await service.addArtworkMuseum(newArtwork.id, newMuseum.id); 
+    const result: MuseumEntity = await service.addArtworkMuseum(newMuseum.id, newArtwork.id); 
 
     expect(result.artworks.length).toBe(1);
     expect(result.artworks).not.toBeNull();
@@ -93,7 +93,7 @@ describe('MuseumArtworkService', () => {
       image: faker.image.url()
     })
 
-    await expect(() => service.addArtworkMuseum("0", newMuseum.id)).rejects.toHaveProperty("message", "The artwork with the given id was not found");
+    await expect(() => service.addArtworkMuseum(newMuseum.id, "0")).rejects.toHaveProperty("message", "The artwork with the given id was not found");
   });
 
   it('addArtworkMuseum should throw an exception for an invalid museum', async () => {
@@ -104,12 +104,12 @@ describe('MuseumArtworkService', () => {
       type: faker.lorem.word(),
       mainImage: faker.image.url()
     });
-    await expect(() => service.addArtworkMuseum(newArtwork.id, "0")).rejects.toHaveProperty("message", "The museum with the given id was not found");
+    await expect(() => service.addArtworkMuseum("0", newArtwork.id)).rejects.toHaveProperty("message", "The museum with the given id was not found");
   });
 
   it('findArtworkByMuseumIdArtworkId should return an artwork by museum', async () => {
     const artwork: ArtworkEntity = artworkList[0];
-    const storedArtwork: ArtworkEntity = await service.findArtworkByMuseumIdArtworkId(artwork.id, museum.id);
+    const storedArtwork: ArtworkEntity = await service.findArtworkByMuseumIdArtworkId(museum.id, artwork.id);
     expect(storedArtwork).not.toBeNull();
     expect(storedArtwork.name).toBe(artwork.name);
     expect(storedArtwork.year).toBe(artwork.year);
@@ -119,12 +119,12 @@ describe('MuseumArtworkService', () => {
   });
 
   it('findArtworkByMuseumIdArtworkId should throw an exception for an invalid artwork', async () => {
-    await expect(() => service.findArtworkByMuseumIdArtworkId("0", museum.id)).rejects.toHaveProperty("message", "The artwork with the given id was not found");
+    await expect(() => service.findArtworkByMuseumIdArtworkId(museum.id, "0")).rejects.toHaveProperty("message", "The artwork with the given id was not found");
   });
 
   it('findArtworkByMuseumIdArtworkId should throw an exception for an invalid museum', async () => {
     const artwork: ArtworkEntity = artworkList[0];
-    await expect(() => service.findArtworkByMuseumIdArtworkId(artwork.id, "0")).rejects.toHaveProperty("message", "The museum with the given id was not found");
+    await expect(() => service.findArtworkByMuseumIdArtworkId("0", artwork.id)).rejects.toHaveProperty("message", "The museum with the given id was not found");
   });
 
   it('findArtworkByMuseumIdArtworkId should throw an exception for an artwork not associated to the museum', async () => {
@@ -136,7 +136,7 @@ describe('MuseumArtworkService', () => {
       mainImage: faker.image.url()
     });
 
-    await expect(() => service.findArtworkByMuseumIdArtworkId(newArtwork.id, museum.id)).rejects.toHaveProperty("message", "The artwork with the given id is not associated to the museum");
+    await expect(() => service.findArtworkByMuseumIdArtworkId(museum.id, newArtwork.id)).rejects.toHaveProperty("message", "The artwork with the given id is not associated to the museum");
   });
 
   it('findArtworksByMuseumId should return the artworks of a museum', async () => {
