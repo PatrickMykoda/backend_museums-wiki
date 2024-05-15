@@ -3,9 +3,11 @@ import { MuseumArtworkService } from './museum-artwork.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MuseumEntity } from '../museum/museum.entity/museum.entity';
 import { ArtworkEntity } from '../artwork/artwork.entity/artwork.entity';
+import { MuseumArtworkController } from './museum-artwork.controller';
 
 @Module({
   imports: [TypeOrmModule.forFeature([MuseumEntity, ArtworkEntity])],
-  providers: [MuseumArtworkService]
+  providers: [MuseumArtworkService],
+  controllers: [MuseumArtworkController]
 })
 export class MuseumArtworkModule {}
