@@ -38,6 +38,6 @@ export class ArtworkService {
         const artwork: ArtworkEntity = await this.artworkRepository.findOne({where: {id}});
         if(!artwork)
             throw new BusinessLogicException("The artwork with the given id was not found", BusinessError.NOT_FOUND);
-        await this.artworkRepository.remove(artwork);
+        return await this.artworkRepository.remove(artwork);
     }
 }

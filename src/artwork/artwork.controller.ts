@@ -36,7 +36,7 @@ export class ArtworkController {
     }
 
     @Delete(':artworkId')
-    @HttpCode(2024)
+    @HttpCode(204)
     async delete(@Param('artworkId') artworkId: string){
         return await this.artworkService.delete(artworkId);
     }
