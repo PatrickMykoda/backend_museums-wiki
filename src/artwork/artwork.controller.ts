@@ -23,11 +23,13 @@ export class ArtworkController {
         return await this.artworkService.findOne(artworkId);
     }
 
+    /* The createArtwork method is now located in the artist-artwork controller in order to automatically create an artwork with an artist
     @Post()
     async create(@Body() artworkDto: ArtworkDto){
         const artwork: ArtworkEntity = plainToInstance(ArtworkEntity, artworkDto);
         return await this.artworkService.create(artwork);
     }
+    */
 
     @Put(':artworkId')
     async update(@Param('artworkId') artworkId: string, @Body() artworkDto: ArtworkDto){

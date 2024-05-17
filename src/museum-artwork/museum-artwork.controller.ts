@@ -17,7 +17,7 @@ export class MuseumArtworkController {
         return await this.museumArtworkService.addArtworkMuseum(museumId, artworkId);
     }
 
-    @Get(':museumId/artworks/artworkId')
+    @Get(':museumId/artworks/:artworkId')
     async findArtworkByMuseumIdByArtworkId(@Param('museumId') museumId: string, @Param('artworkId') artworkId: string){
         return await this.findArtworkByMuseumIdByArtworkId(museumId, artworkId);
     }
