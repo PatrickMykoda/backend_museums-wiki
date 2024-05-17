@@ -19,7 +19,7 @@ export class MuseumArtworkController {
 
     @Get(':museumId/artworks/:artworkId')
     async findArtworkByMuseumIdByArtworkId(@Param('museumId') museumId: string, @Param('artworkId') artworkId: string){
-        return await this.findArtworkByMuseumIdByArtworkId(museumId, artworkId);
+        return await this.museumArtworkService.findArtworkByMuseumIdArtworkId(museumId, artworkId);
     }
 
     @Get(':museumId/artworks')

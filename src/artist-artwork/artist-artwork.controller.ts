@@ -4,7 +4,6 @@ import { ArtistArtworkService } from './artist-artwork.service';
 import { ArtworkDto } from '../artwork/artwork.dto/artwork.dto';
 import { plainToInstance } from 'class-transformer';
 import { ArtworkEntity } from '../artwork/artwork.entity/artwork.entity';
-import { ArtworkService } from '../artwork/artwork.service';
 
 @Controller('artists')
 @UseInterceptors(BusinessErrorsInterceptor)

@@ -23,10 +23,9 @@ export class ArtworkService {
         return artwork;
     };
 
-    /* The artwork create method is now located in the artist-artwork service in order to automatically create an artwork associated to an artist
     async create(artwork: ArtworkEntity): Promise<ArtworkEntity> {
         return await this.artworkRepository.save(artwork);
-    }*/
+    }
 
     async update(id: string, artwork: ArtworkEntity): Promise<ArtworkEntity> {
         const persistedArtwork: ArtworkEntity = await this.artworkRepository.findOne({where: {id}});

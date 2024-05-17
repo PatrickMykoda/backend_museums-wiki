@@ -16,6 +16,19 @@ export class ArtworkImageService {
         private readonly imageRepository: Repository<ImageEntity>
     ){}
 
+    async createImageArtwork(artworkId: string, image: ImageEntity): Promise<ImageEntity>{
+        const artwork: ArtworkEntity = await this.artworkRepository.findOne({where: {id: artworkId}, relations: ["artist", "images"]});
+        if (!artwork)
+            throw new BusinessLogicException("The artwork with the given id was not found", BusinessError.NOT_FOUND);
+
+        let newImage: ImageEntity = await this.imageRepository.save(image);
+    
+        artwork.images = [...artwork.images, image];
+        await this.artworkRepository.save(artwork);
+
+        return await this.imageRepository.findOne({where: {id: newImage.id}, relations: ["artwork"]});
+    }
+
     async addImageArtwork(artworkId: string, imageId: string): Promise<ArtworkEntity>{
         const artwork: ArtworkEntity = await this.artworkRepository.findOne({where: {id: artworkId}, relations: ["images"]});
         if(!artwork)
