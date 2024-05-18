@@ -16,6 +16,19 @@ export class MuseumExhibitionService {
         private readonly exhibitionRepository: Repository<ExhibitionEntity>
     ){}
 
+    async createExhibitionMuseum(museumId: string, exhibition: ExhibitionEntity): Promise<ExhibitionEntity>{
+        const museum: MuseumEntity = await this.museumRepository.findOne({where: {id: museumId}, relations: ["exhibitions", "artworks"]});
+        if (!museum)
+            throw new BusinessLogicException("The museum with the given id was not found", BusinessError.NOT_FOUND);
+
+        let newExhibition: ExhibitionEntity = await this.exhibitionRepository.save(exhibition);
+    
+        museum.exhibitions = [...museum.exhibitions, newExhibition];
+        await this.museumRepository.save(museum);
+
+        return await this.exhibitionRepository.findOne({where: {id: newExhibition.id}, relations: ["museum", "artworks", "sponsor"]});
+    }
+
     async addExhibitionMuseum(museumId: string, exhibitionId: string): Promise<MuseumEntity> {
         const exhibition: ExhibitionEntity = await this.exhibitionRepository.findOne({where: {id: exhibitionId}});
         if (!exhibition)

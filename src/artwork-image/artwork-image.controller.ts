@@ -3,8 +3,10 @@ import { ArtworkImageService } from './artwork-image.service';
 import { ImageDto } from '../image/image.dto/image.dto';
 import { ImageEntity } from '../image/image.entity/image.entity';
 import { plainToInstance } from 'class-transformer';
+import { BusinessErrorsInterceptor } from '../shared/interceptors/business-errors/business-errors.interceptor';
 
 @Controller('artworks')
+@UseInterceptors(BusinessErrorsInterceptor)
 export class ArtworkImageController {
 
     constructor(
