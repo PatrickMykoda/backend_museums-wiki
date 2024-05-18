@@ -14,7 +14,7 @@ export class ExhibitionArtworkController {
     ){}
 
     @Post(':exhibitionId/artworks/:artworkId')
-    async addArtworkExhibition(@Param('exhibitionId') exhibitionId: string, @Param(':artworkId') artworkId: string){
+    async addArtworkExhibition(@Param('exhibitionId') exhibitionId: string, @Param('artworkId') artworkId: string){
         return await this.exhibitionArtworkService.addArtworkExhibition(exhibitionId, artworkId);
     }
 
@@ -29,7 +29,7 @@ export class ExhibitionArtworkController {
     }
 
     @Put(':exhibitionId/artworks')
-    async associateArtworksExhibition(@Body() artworksDto: ArtworkDto[], @Param(':exhibitionId') exhibitionId: string){
+    async associateArtworksExhibition(@Body() artworksDto: ArtworkDto[], @Param('exhibitionId') exhibitionId: string){
         const artworks = plainToInstance(ArtworkEntity, artworksDto);
         return await this.exhibitionArtworkService.associateArtworksExhibition(exhibitionId, artworks);
     }
