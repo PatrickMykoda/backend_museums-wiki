@@ -13,11 +13,11 @@ export class SponsorService {
     ){}
 
     async findAll(): Promise<SponsorEntity[]> {
-        return await this.sponsorRepository.find({relations: ["exhibition"]});
+        return await this.sponsorRepository.find({relations: ["exhibitions"]});
     }
 
     async findOne(id: string): Promise<SponsorEntity> {
-        const sponsor: SponsorEntity = await this.sponsorRepository.findOne({where: {id}, relations: ["exhibition"]});
+        const sponsor: SponsorEntity = await this.sponsorRepository.findOne({where: {id}, relations: ["exhibitions"]});
         if(!sponsor)
             throw new BusinessLogicException("The sponsor with the given id was not found", BusinessError.NOT_FOUND);
         return sponsor;

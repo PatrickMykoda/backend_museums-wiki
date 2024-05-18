@@ -14,7 +14,6 @@ import { MovementArtistModule } from './movement-artist/movement-artist.module';
 import { ExhibitionArtworkModule } from './exhibition-artwork/exhibition-artwork.module';
 import { ArtworkImageModule } from './artwork-image/artwork-image.module';
 import { MuseumExhibitionModule } from './museum-exhibition/museum-exhibition.module';
-import { ExhibitionSponsorModule } from './exhibition-sponsor/exhibition-sponsor.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ArtistEntity } from './artist/artist.entity/artist.entity';
 import { ArtworkEntity } from './artwork/artwork.entity/artwork.entity';
@@ -23,9 +22,10 @@ import { ImageEntity } from './image/image.entity/image.entity';
 import { MovementEntity } from './movement/movement.entity/movement.entity';
 import { MuseumEntity } from './museum/museum.entity/museum.entity';
 import { SponsorEntity } from './sponsor/sponsor.entity/sponsor.entity';
+import { SponsorExhibitionModule } from './sponsor-exhibition/sponsor-exhibition.module';
 
 @Module({
-  imports: [MuseumModule, ExhibitionModule, ArtworkModule, ArtistModule, SponsorModule, ImageModule, MovementModule, MuseumArtworkModule, ArtistArtworkModule, MovementArtistModule, ExhibitionArtworkModule, ArtworkImageModule, MuseumExhibitionModule, ExhibitionSponsorModule,
+  imports: [MuseumModule, ExhibitionModule, ArtworkModule, ArtistModule, SponsorModule, ImageModule, MovementModule, MuseumArtworkModule, ArtistArtworkModule, MovementArtistModule, ExhibitionArtworkModule, ArtworkImageModule, MuseumExhibitionModule, SponsorExhibitionModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',

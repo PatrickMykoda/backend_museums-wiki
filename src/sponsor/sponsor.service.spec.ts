@@ -64,7 +64,7 @@ describe('SponsorService', () => {
       name: faker.person.fullName(),
       description: faker.lorem.sentence(),
       website: faker.internet.url(),
-      exhibition: null
+      exhibitions: []
     }
 
     const newSponsor: SponsorEntity = await service.create(sponsor);
