@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Realism",
+        "description": "A mid-19th-century art movement focused on depicting everyday life and society with a high degree of accuracy and without idealization.",
+        "countryOfOrigin": "France"
+    },
+    {
+        "name": "Impressionism",
+        "description": "A 19th-century art movement characterized by small, thin brush strokes, open composition, emphasis on accurate depiction of light, and ordinary subject matter.",
+        "countryOfOrigin": "France"
+    },
+    {
+        "name": "Cubism",
+        "description": "An early 20th-century avant-garde art movement that revolutionized European painting and sculpture with its abstracted forms and fragmented perspective.",
+        "countryOfOrigin": "France"
+    },
+    {
+        "name": "Surrealism",
+        "description": "A 20th-century art movement that sought to release the creative potential of the unconscious mind through dream-like, fantastical imagery.",
+        "countryOfOrigin": "France"
+    },
+    {
+        "name": "Abstract Expressionism",
+        "description": "A post-World War II art movement in American painting, developed in New York in the 1940s, characterized by gestural brush strokes and the impression of spontaneity.",
+        "countryOfOrigin": "United States"
+    },
+    {
+        "name": "Pop Art",
+        "description": "An art movement that emerged in the mid-1950s in Britain and the late 1950s in the United States, drawing inspiration from popular and commercial culture.",
+        "countryOfOrigin": "United States"
+    }
+]

@@ -12,7 +12,7 @@ export class MuseumArtworkController {
         private readonly museumArtworkService: MuseumArtworkService
     ){}
 
-    @Post(':museumdId/artworks/:artworkId')
+    @Post(':museumId/artworks/:artworkId')
     async addArtworkMuseum(@Param('museumId') museumId: string, @Param('artworkId') artworkId: string){
         return await this.museumArtworkService.addArtworkMuseum(museumId, artworkId);
     }

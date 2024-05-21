@@ -1,0 +1,45 @@
+[
+    {
+      "name": "Asian Art Institute",
+      "description": "Asia's biggest art collection offers a focus on modern art, but lovers of more classical pieces will also find some treasures of art history.",
+      "address": "Art Street 40",
+      "city": "Tokyo",
+      "image": "https://cdn.pixabay.com/photo/2023/09/02/18/07/escalator-8229360_1280.jpg"
+    },
+    {
+      "name": "Art Heritage Center",
+      "description": "Celebrate the classical craft of painting with thousands or artworks from the Renaissance up until the 20th Century.",
+      "address": "Hauptstrasse 90",
+      "city": "Vienna",
+      "image": "https://images.pexels.com/photos/208636/pexels-photo-208636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Modern Art Museum",
+      "description": "Explore the dynamic world of modern art at this contemporary museum. Featuring works by Picasso, Warhol, and Hockney, this museum showcases the diversity and innovation of 20th-century art.",
+      "address": "456 Gallery Avenue",
+      "city": "New York",
+      "image": "https://cdn.pixabay.com/photo/2014/07/21/17/52/museum-398761_1280.jpg"
+    },
+    {
+      "name": "Impressionist Collection",
+      "description": "Step into a world of light and color with this stunning collection of Impressionist art. Featuring works by Monet, Renoir, and Degas, this museum celebrates the beauty of the natural world.",
+      "address": "789 Impressionist Lane",
+      "city": "Paris",
+      "image": "https://cdn.pixabay.com/photo/2016/05/31/19/51/lille-1427700_1280.jpg"
+    },
+    {
+      "name": "Photography Museum",
+      "description": "Capture the beauty of the world through the lens of photography at this captivating museum. Featuring works by Ansel Adams, Dorothea Lange, and Steve McCurry, this museum offers a visual journey through time and space.",
+      "address": "606 Photography Lane",
+      "city": "Los Angeles",
+      "image": "https://images.pexels.com/photos/992342/pexels-photo-992342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Sculpture Garden",
+      "description": "Explore the beauty of outdoor sculpture at this tranquil garden. Featuring works by Rodin, Moore, and Calder, this museum offers a serene escape into the world of sculpture.",
+      "address": "808 Garden Avenue",
+      "city": "Washington DC",
+      "image": "https://images.pexels.com/photos/8528973/pexels-photo-8528973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    }
+  ]
+  

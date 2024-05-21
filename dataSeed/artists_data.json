@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Hanna Lund",
+        "birthplace": "Stockholm",
+        "birthdate": "1775-06-05",
+        "image": "https://images.unsplash.com/photo-1705168383356-93edd1a3183b?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Elisabeth Bruckner",
+        "birthplace": "Linz",
+        "birthdate": "1805-04-16",
+        "image": "https://images.unsplash.com/photo-1689016466250-2ca464f0c642?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Charles Dubois",
+        "birthplace": "Bordeaux",
+        "birthdate": "1821-08-08",
+        "image": "https://images.unsplash.com/photo-1705167112770-dbcc9d2b4273?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Mary Kruger",
+        "birthplace": "London",
+        "birthdate": "1862-06-18",
+        "image": "https://images.unsplash.com/photo-1542216675-350f90a249f7?q=80&w=1921&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Elena Popov",
+        "birthplace": "Sofia",
+        "birthdate": "1875-03-09",
+        "image": "https://images.unsplash.com/photo-1572430767624-3b0cab0f6b1d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fG9sZCUyMHdvbWFufGVufDB8fDB8fHww"
+    },
+    {
+        "name": "Ahmed Sara",
+        "birthplace": "Casablanca",
+        "birthdate": "1882-10-10",
+        "image": "https://images.unsplash.com/photo-1705167113320-bffc1c860e6f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBhaW50ZWQlMjBwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        "name": "Javier Martinez",
+        "birthplace": "Buenos Aires",
+        "birthdate": "1894-12-03",
+        "image": "https://images.pexels.com/photos/3091193/pexels-photo-3091193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Andrei Slivkov",
+        "birthplace": "Prag",
+        "birthdate": "1895-03-22",
+        "image": "https://images.unsplash.com/photo-1700146282296-399e255c68de?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Olga Novak",
+        "birthplace": "Amsterdam",
+        "birthdate": "1918-07-07",
+        "image": "https://images.pexels.com/photos/5221712/pexels-photo-5221712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Cem Izmir",
+        "birthplace": "Istanbul",
+        "birthdate": "1927-11-30",
+        "image": "https://images.pexels.com/photos/13515201/pexels-photo-13515201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Maya Kim",
+        "birthplace": "Seoul",
+        "birthdate": "1944-10-29",
+        "image": "https://cdn.pixabay.com/photo/2016/02/22/09/46/citizen-1215083_960_720.jpg"
+    },
+    {
+        "name": "Emma Wilson",
+        "birthplace": "Sydney",
+        "birthdate": "1947-05-22",
+        "image": "https://images.pexels.com/photos/5990272/pexels-photo-5990272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Ahmed El-Sayed",
+        "birthplace": "Cairo",
+        "birthdate": "1951-09-25",
+        "image": "https://images.pexels.com/photos/5424826/pexels-photo-5424826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Hassan Elneny",
+        "birthplace": "Alexandria",
+        "birthdate": "1955-12-19",
+        "image": "https://images.pexels.com/photos/1486470/pexels-photo-1486470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Yuki Nakamura",
+        "birthplace": "Kyoto",
+        "birthdate": "1964-02-27",
+        "image": "https://images.pexels.com/photos/3773986/pexels-photo-3773986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Karl Magnusson",
+        "birthplace": "Copenhagen",
+        "birthdate": "1965-06-14",
+        "image": "https://images.pexels.com/photos/3778998/pexels-photo-3778998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Jaque Filou",
+        "birthplace": "Paris",
+        "birthdate": "1970-04-21",
+        "image": "https://images.pexels.com/photos/1043331/pexels-photo-1043331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Ravi Patel",
+        "birthplace": "New Delhi",
+        "birthdate": "1978-08-24",
+        "image": "https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Carlos Fernandez",
+        "birthplace": "Mexico City",
+        "birthdate": "1984-03-12",
+        "image": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39"
+    },
+    {
+        "name": "Daniela Silva",
+        "birthplace": "São Paulo",
+        "birthdate": "1986-02-11",
+        "image": "https://images.pexels.com/photos/5641957/pexels-photo-5641957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Freeda",
+        "birthplace": "Brisbane",
+        "birthdate": "1988-06-05",
+        "image": "https://images.pexels.com/photos/3817580/pexels-photo-3817580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Lucia Torres",
+        "birthplace": "Lima",
+        "birthdate": "1989-11-05",
+        "image": "https://images.pexels.com/photos/9947707/pexels-photo-9947707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "name": "Fernando Lopez",
+        "birthplace": "Cali",
+        "birthdate": "1990-07-11",
+        "image": "https://plus.unsplash.com/premium_photo-1683140772036-3abb9ce8528e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Leila Ecco",
+        "birthplace": "Paris",
+        "birthdate": "1992-11-08",
+        "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9"
+    },
+    {
+        "name": "July Reeves",
+        "birthplace": "Portland",
+        "birthdate": "1994-01-30",
+        "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1"
+    }
+]

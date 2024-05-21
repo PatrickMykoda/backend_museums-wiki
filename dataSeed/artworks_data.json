@@ -1,0 +1,528 @@
+[    
+    {
+        "name": "Infinite Horizons",
+        "year": 1813,
+        "description": "A painting that explores the concept of infinite possibilities through expansive landscapes.",
+        "type": "Impressionist Painting",
+        "mainImage": "https://images.pexels.com/photos/3070934/pexels-photo-3070934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Good times",
+        "year": 1814,
+        "description": "A painting about the innocence of youth",
+        "type": "Realistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2016/08/07/09/17/old-1575887_960_720.jpg"
+    },
+    {
+        "name": "The Holiday",
+        "year": 1823,
+        "description": "A painting showing tranquility of a Scandinavian lake on a sunday evening.",
+        "type": "Impressionist Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2018/09/27/19/23/boats-3707704_960_720.jpg"
+    },
+    {
+        "name": "The Weaver",
+        "year": 1836,
+        "description": "The famous weaver during the last minutes of his late night shift.",
+        "type": "Impressionist Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2016/06/01/00/46/post-impressionist-1428139_960_720.jpg"
+    },
+    {
+        "name": "The Artist",
+        "year": 1843,
+        "description": "The doubts and artistical struggles of youn violin player.",
+        "type": "Realistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2022/03/07/21/14/woman-7054569_960_720.jpg"
+    },
+    {
+        "name": "The Flowers",
+        "year": 1847,
+        "description": "An oil painting showing the fading beauty of roses.",
+        "type": "Realistic Painting",
+        "mainImage": "https://images.pexels.com/photos/1005711/pexels-photo-1005711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "The Monastry",
+        "year": 1856,
+        "description": "A painting that captures the atmosphere at a monastry via a nun sunken in thought",
+        "type": "Realistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/02/22/17/56/ai-generated-8590558_960_720.jpg"
+    },
+    {
+        "name": "The River",
+        "year": 1864,
+        "description": "The famous impressionist painting 'The River'.",
+        "type": "Impressionist Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/03/12/18/30/ai-generated-8629330_960_720.jpg"
+    },
+    {
+        "name": "Sad Forest",
+        "year": 1868,
+        "description": "A painting that depicts a forest tormented by a storm on a sad autumn day.",
+        "type": "Impressionist Painting",
+        "mainImage": "https://images.pexels.com/photos/5739358/pexels-photo-5739358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Fishermen's Delight",
+        "year": 1888,
+        "description": "A painting that depicts the melancholic side of the hard lives of 19th century fishermen.",
+        "type": "Impressionist Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/04/09/13/52/ai-generated-8685989_960_720.png"
+    },
+    {
+        "name": "Nature's Pulse",
+        "year": 1890,
+        "description": "A painting that represents the pulsating energy of nature.",
+        "type": "Realistic Painting",
+        "mainImage": "https://images.unsplash.com/photo-1577083639236-0f560d3d771c?q=80&w=1967&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "The Reader",
+        "year": 1893,
+        "description": "A painting showing the shrewdness of great literature through a cat",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/04/02/16/12/ai-generated-8671169_960_720.png"
+    },
+    {
+        "name": "The Whispering Forest",
+        "year": 1895,
+        "description": "A mesmerizing painting that captures the mysterious beauty of a dense forest with subtle whispers of wildlife.",
+        "type": "Realistic Painting",
+        "mainImage": "https://images.unsplash.com/photo-1579965342575-16428a7c8881?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Sunset Over the Plains",
+        "year": 1902,
+        "description": "A beautiful landscape painting depicting a serene sunset over vast, open plains.",
+        "type": "Impressionist Painting",
+        "mainImage": "https://images.pexels.com/photos/2253900/pexels-photo-2253900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Abstract Thoughts",
+        "year": 1902,
+        "description": "A painting that represents abstract thoughts and ideas through intricate line work.",
+        "type": "Abstract Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2023/12/14/20/02/forms-8449589_960_720.jpg"
+    },
+    {
+        "name": "Crimson Waves",
+        "year": 1909,
+        "description": "An abstract painting that captures the dynamic energy of crimson waves crashing against the shore.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.unsplash.com/photo-1609083380444-26fd227d7339?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "The Enchanted Garden",
+        "year": 1910,
+        "description": "A painting that transports viewers to an enchanted garden filled with vibrant flowers and mystical creatures.",
+        "type": "Impressionist Painting",
+        "mainImage": "https://images.unsplash.com/photo-1666349751216-792c3ab59094?q=80&w=1979&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "The City of Tomorrow",
+        "year": 1913,
+        "description": "The famous gloomy picture of a town that captures the fear of the future with surreal shapes.",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/03/10/10/26/ai-generated-8624451_960_720.jpg"
+    },
+    {
+        "name": "The dot",
+        "year": 1916,
+        "description": "A painting that captures the fleeting moments of everyday life.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/1145720/pexels-photo-1145720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Echoes of Time",
+        "year": 1920,
+        "description": "A hauntingly beautiful sculpture that portrays the passage of time through intertwined human figures.",
+        "type": "Sculpture",
+        "mainImage": "https://images.unsplash.com/photo-1604854574894-1be73ca43cb8?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Warm and Cold Colors",
+        "year": 1925,
+        "description": "A description of an emotional up and down using the contrast of hot and cold color tones.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/1070527/pexels-photo-1070527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Worlds Apart",
+        "year": 1927,
+        "description": "Surrealism at its best: The world inside an egg inside a galaxy of eggs.",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/02/16/18/32/ai-generated-8578125_960_720.jpg"
+    },
+    {
+        "name": "Stroke of Genius",
+        "year": 1928,
+        "description": "A man lies on a path starring at the nigth sky when an epiphany comes in the form of a shooting star.",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2021/04/29/05/04/desert-6215516_960_720.jpg"
+    },
+    {
+        "name": "Book of Nature",
+        "year": 1932,
+        "description": "A surreal painting showing the deep knowledge hidden in nature.",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2015/07/27/20/16/book-863418_960_720.jpg"
+    },
+    {
+        "name": "The Mystery of Life",
+        "year": 1935,
+        "description": "A painting that depicts the irrational side of life through bright and dark color tones mingling lively.",
+        "type": "Abstract Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/03/22/18/42/ai-generated-8650293_960_720.jpg"
+    },
+    {
+        "name": "The Forgotten Path",
+        "year": 1937,
+        "description": "A painting that depicts an overgrown path, forgotten by time, and reclaimed by nature.",
+        "type": "Realistic Painting",
+        "mainImage": "https://images.pexels.com/photos/2080963/pexels-photo-2080963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Timeless Beauty",
+        "year": 1958,
+        "description": "A photograph that captures the timeless beauty of a classic architectural marvel.",
+        "type": "Photography",
+        "mainImage": "https://images.pexels.com/photos/5272995/pexels-photo-5272995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Father Nature",
+        "year": 1959,
+        "description": "Father nature in all his colorful glory.",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/05/17/06/35/experiment-8767458_960_720.jpg"
+    },
+    {
+        "name": "Got it?",
+        "year": 1963,
+        "description": "Did you get this famous 1960's piece of art? Some claim they have...",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2020/12/14/15/49/tree-5831258_960_720.jpg"
+    },
+    {
+        "name": "Whispers in the Wind",
+        "year": 1965,
+        "description": "A photograph capturing the gentle whispers of the wind in a serene landscape.",
+        "type": "Photography",
+        "mainImage": "https://images.unsplash.com/photo-1632061046569-e38a8b90ee0d?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "The Egg",
+        "year": 1968,
+        "description": "A sandy and rocky world far away from earth where huge rocks turn into fiery eggs.",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2016/05/24/12/24/rock-1412287_960_720.jpg"
+    },
+    {
+        "name": "Eternal Dawn",
+        "year": 1970,
+        "description": "A photograph capturing the orchestrated beauty of a deserted beach at dawn.",
+        "type": "Photography",
+        "mainImage": "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Solitude",
+        "year": 1974,
+        "description": "A painting capturing a lone figure standing at the edge of a cliff, gazing out to sea.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/03/29/18/09/ai-generated-8663400_960_720.png"
+    },
+    {
+        "name": "Hidden Depths",
+        "year": 1975,
+        "description": "A drawing that explores the hidden depths of the human psyche.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/9259416/pexels-photo-9259416.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Reflections of the Past",
+        "year": 1975,
+        "description": "A Photography that reflects on the past through intricate lines and historical motifs.",
+        "type": "Photography",
+        "mainImage": "https://images.unsplash.com/photo-1530177150700-84cd9a3b059b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Whispers of the Past",
+        "year": 1975,
+        "description": "A nostalgic photograph capturing the essence of a bygone era.",
+        "type": "Photography",
+        "mainImage": "https://cdn.pixabay.com/photo/2021/07/10/18/37/carousel-6402074_960_720.jpg"
+    },
+    {
+        "name": "Sacred Geometry",
+        "year": 1976,
+        "description": "A drawing that delves into the beauty and complexity of geometric patterns.",
+        "type": "Abstract Drawing",
+        "mainImage": "https://images.unsplash.com/photo-1701297234661-a33f9f418053?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "Silent Echoes",
+        "year": 1978,
+        "description": "A photograph capturing the silent beauty of a deserted landscape.",
+        "type": "Photography",
+        "mainImage": "https://cdn.pixabay.com/photo/2014/03/05/21/12/desert-279862_960_720.jpg"
+    },
+    {
+        "name": "Echoes of Nature",
+        "year": 1980,
+        "description": "A painting that reflects the intricate and delicate balance of nature.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://images.pexels.com/photos/713058/pexels-photo-713058.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Celestial Visit",
+        "year": 1981,
+        "description": "A painting that captures the graceful dance of the moon in the night sky.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2019/12/07/05/14/space-4678686_960_720.jpg"
+    },
+    {
+        "name": "Urban Reflections",
+        "year": 1982,
+        "description": "A photograph that captures the reflections of city lights on a rainy night.",
+        "type": "Photography",
+        "mainImage": "https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Nature's Embrace",
+        "year": 1983,
+        "description": "A sculpture that represents the embrace of nature and humanity.",
+        "type": "Sculpture",
+        "mainImage": "https://images.pexels.com/photos/6249734/pexels-photo-6249734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Whispers of Silence",
+        "year": 1984,
+        "description": "A painting capturing the serene silence of a snow-covered landscape.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2022/09/19/01/20/snow-7464289_960_720.png"
+    },
+    {
+        "name": "The Lake",
+        "year": 1987,
+        "description": "A painting capturing the feeling of home on the back of a landscape dominated by a mountain lake.",
+        "type": "Surrealistic Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2021/01/05/01/15/home-5889366_960_720.jpg"
+    },
+    {
+        "name": "Industrial Echoes",
+        "year": 1990,
+        "description": "A photograph that captures the similarity between nature and artificial structures.",
+        "type": "Photography",
+        "mainImage": "https://images.unsplash.com/photo-1504198453319-5ce911bafcde"
+    },
+    {
+        "name": "The Inwards Path",
+        "year": 1991,
+        "description": "A painting capturing the solitude of a surreal path turing a window into a door.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://images.pexels.com/photos/20141378/pexels-photo-20141378/free-photo-of-painting-of-a-winter-landscape-hanging-in-the-doorway-of-a-stone-building.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Waves of Emotion",
+        "year": 1992,
+        "description": "A painting that captures the turbulent waves of human emotion through bold brushstrokes.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2022/09/30/19/38/woman-7490144_960_720.jpg"
+    },
+    {
+        "name": "The Thinker",
+        "year": 1992,
+        "description": "This famous sculpture shows the timeless elegance of deep thought.",
+        "type": "Sculpture",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/05/07/19/00/ai-generated-8746473_960_720.jpg"
+    },
+    {
+        "name": "Frozen Moments",
+        "year": 1994,
+        "description": "A photograph capturing fleeting moments frozen in time.",
+        "type": "Photography",
+        "mainImage": "https://cdn.pixabay.com/photo/2016/01/07/16/21/night-bird-1126076_960_720.jpg"
+    },
+    {
+        "name": "Urban Symphony",
+        "year": 1998,
+        "description": "A sculpture that captures the symphony of sounds and movements in a bustling city.",
+        "type": "Sculpture",
+        "mainImage": "https://images.pexels.com/photos/13336520/pexels-photo-13336520.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Urban Pulse",
+        "year": 1999,
+        "description": "A dynamic sculpture representing the vibrant energy of urban life.",
+        "type": "Sculpture",
+        "mainImage": "https://images.unsplash.com/photo-1515139832362-a06b09ecced0?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "name": "City Rhythms",
+        "year": 2000,
+        "description": "A sculpture that embodies the rhythmic patterns of urban life.",
+        "type": "Sculpture",
+        "mainImage": "https://images.pexels.com/photos/5833471/pexels-photo-5833471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Serenity in Blue",
+        "year": 2001,
+        "description": "An abstract painting that evokes a sense of calm and tranquility with its soothing blue tones and fluid forms.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2021/01/01/16/06/hand-5879027_960_720.jpg"
+    },
+    {
+        "name": "The Cactus",
+        "year": 2003,
+        "description": "Things with thorns can be astonishingly beautiful - as shown by this famous piece of photography.",
+        "type": "Photography",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/05/07/03/49/agave-8744705_960_720.jpg"
+    },
+    {
+        "name": "Urban Jungle",
+        "year": 2003,
+        "description": "A Painting capturing the contrast between urban development and natural elements.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://images.pexels.com/photos/110118/pexels-photo-110118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "New York",
+        "year": 2004,
+        "description": "A painting capturing the majestic city of New York.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2023/12/13/20/56/ai-generated-8447708_960_720.jpg"
+    },
+    {
+        "name": "Metropolitan Dreams",
+        "year": 2005,
+        "description": "A striking photograph capturing the dream of making it in a metropolis.",
+        "type": "Photography",
+        "mainImage": "https://cdn.pixabay.com/photo/2015/07/10/16/30/brooklyn-839636_960_720.jpg"
+    },
+    {
+        "name": "Dreamscape",
+        "year": 2005,
+        "description": "An abstract painting that invites viewers into a surreal dreamscape with its vivid colors and fluid forms.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/7004697/pexels-photo-7004697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Coolness",
+        "year": 2006,
+        "description": "A painting that captures real coolness with a dog wearing sunglasses.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2024/05/01/12/08/dog-8732216_960_720.png"
+    },
+    {
+        "name": "Just a Cat",
+        "year": 2007,
+        "description": "A painting that transports viewers to a mystical realm where everybody loves cats.",
+        "type": "Abstract Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2023/08/28/11/16/artist-8219011_960_720.jpg"
+    },
+    {
+        "name": "Celestial Wonders",
+        "year": 2008,
+        "description": "A painting inspired by the awe-inspiring beauty of the cosmos.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/3109807/pexels-photo-3109807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dancing Lights",
+        "year": 2010,
+        "description": "A painting that depicts the mesmerizing dance of lights on a rainy night.",
+        "type": "Postmodern Painting",
+        "mainImage": "https://images.pexels.com/photos/1816529/pexels-photo-1816529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Here We Go!",
+        "year": 2010,
+        "description": "Here goes the famous sculpture which shows that life can be light and breezy after all.",
+        "type": "Sculpture",
+        "mainImage": "https://images.pexels.com/photos/143967/pexels-photo-143967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Ethereal Light",
+        "year": 2010,
+        "description": "A drawing that plays with light and shadow to create an ethereal effect.",
+        "type": "Abstract Drawing",
+        "mainImage": "https://images.pexels.com/photos/5997209/pexels-photo-5997209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Ephemeral Beauty",
+        "year": 2011,
+        "description": "A painting that captures the fleeting beauty of a delicate flower.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/15279130/pexels-photo-15279130/free-photo-of-sand-drawing-of-flower.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Celestial Harmony",
+        "year": 2012,
+        "description": "An abstract piece that draws inspiration from the harmony of celestial bodies in the universe.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Into the Blue",
+        "year": 2014,
+        "description": "An abstract painting that explores the depths of the ocean through vibrant blue hues.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/1568607/pexels-photo-1568607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Self Portrait",
+        "year": 2014,
+        "description": "A piece of art that gasps into the future by depicting the moral pickle humanity faces on its path to becoming humanoids",
+        "type": "Postmodern Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2015/07/15/09/00/man-845847_960_720.jpg"
+    },
+    {
+        "name": "Ancient Symbols",
+        "year": 2015,
+        "description": "A photography that incorporates ancient symbols and motifs to tell a story.",
+        "type": "Photography",
+        "mainImage": "https://images.pexels.com/photos/672630/pexels-photo-672630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Fragmented Reality",
+        "year": 2015,
+        "description": "A mixed media artwork that explores the concept of fragmented identities in the digital age.",
+        "type": "Abstract Painting",
+        "mainImage": "https://cdn.pixabay.com/photo/2016/12/01/06/38/texture-1874557_960_720.jpg"
+    },
+    
+    {
+        "name": "Cosmic Harmony",
+        "year": 2017,
+        "description": "An abstract painting that depicts the harmonious dance of celestial bodies.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Galactic Dreams",
+        "year": 2018,
+        "description": "An abstract painting inspired by the infinite possibilities of the galaxy.",
+        "type": "Abstract Painting",
+        "mainImage": "https://images.pexels.com/photos/3177333/pexels-photo-3177333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Lost in Thought",
+        "year": 2019,
+        "description": "A drawing that photography a figure deep in thought, surrounded by abstract shapes.",
+        "type": "Photography",
+        "mainImage": "https://images.pexels.com/photos/5430078/pexels-photo-5430078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "The Drop",
+        "year": 2019,
+        "description": "Shhh! If you keep quiet you might hear how the liquid drops.",
+        "type": "Sculpture",
+        "mainImage": "https://images.pexels.com/photos/8423798/pexels-photo-8423798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Digital Dreams",
+        "year": 2021,
+        "description": "A drawing that combines digital and traditional techniques to create a futuristic vision.",
+        "type": "Abstract Drawing",
+        "mainImage": "https://images.unsplash.com/photo-1515155075601-23009d0cb6d4?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+]
