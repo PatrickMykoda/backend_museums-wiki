@@ -23,6 +23,7 @@ import { MovementEntity } from './movement/movement.entity/movement.entity';
 import { MuseumEntity } from './museum/museum.entity/museum.entity';
 import { SponsorEntity } from './sponsor/sponsor.entity/sponsor.entity';
 import { SponsorExhibitionModule } from './sponsor-exhibition/sponsor-exhibition.module';
+import { CacheModule } from '@nestjs/cache-manager';
 
 @Module({
   imports: [MuseumModule, ExhibitionModule, ArtworkModule, ArtistModule, SponsorModule, ImageModule, MovementModule, MuseumArtworkModule, ArtistArtworkModule, MovementArtistModule, ExhibitionArtworkModule, ArtworkImageModule, MuseumExhibitionModule, SponsorExhibitionModule,
@@ -37,7 +38,8 @@ import { SponsorExhibitionModule } from './sponsor-exhibition/sponsor-exhibition
       dropSchema: true,
       synchronize: true,
       keepConnectionAlive: true
-    })
+    }),
+    CacheModule.register()
   ],
   controllers: [AppController],
   providers: [AppService],
