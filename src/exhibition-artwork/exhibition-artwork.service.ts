@@ -1,19 +1,26 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ArtworkEntity } from '../artwork/artwork.entity/artwork.entity';
 import { ExhibitionEntity } from '../exhibition/exhibition.entity/exhibition.entity';
 import { Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from '../shared/errors/business-errors';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class ExhibitionArtworkService {
+
+    cacheKey: string = "exhibitionArtworks-";
 
     constructor(
         @InjectRepository(ExhibitionEntity)
         private readonly exhibitionRepository: Repository<ExhibitionEntity>,
 
         @InjectRepository(ArtworkEntity)
-        private readonly artworkRepository: Repository<ArtworkEntity>
+        private readonly artworkRepository: Repository<ArtworkEntity>,
+
+        @Inject(CACHE_MANAGER)
+        private readonly cacheManager: Cache
     ){}
 
     async addArtworkExhibition(exhibitionId: string, artworkId: string): Promise<ExhibitionEntity>{
@@ -47,10 +54,15 @@ export class ExhibitionArtworkService {
     }
 
     async findArtworksByExhibitionId(exhibitionId:string): Promise<ArtworkEntity[]> {
-        const exhibition: ExhibitionEntity = await this.exhibitionRepository.findOne({where: {id: exhibitionId}, relations: ["museum", "artworks", "sponsor"]});
-        if (!exhibition)
-            throw new BusinessLogicException("The exhibition with the given id was not found", BusinessError.NOT_FOUND);
-        return exhibition.artworks;
+        const cachedExhibitionArtworks: ArtworkEntity[] = await this.cacheManager.get<ArtworkEntity[]>(this.cacheKey + exhibitionId);
+        if(!cachedExhibitionArtworks){
+            const exhibition: ExhibitionEntity = await this.exhibitionRepository.findOne({where: {id: exhibitionId}, relations: ["museum", "artworks", "sponsor"]});
+            if (!exhibition)
+                throw new BusinessLogicException("The exhibition with the given id was not found", BusinessError.NOT_FOUND);
+            await this.cacheManager.set(this.cacheKey+exhibitionId, exhibition.artworks);
+            return exhibition.artworks;
+        }
+        return cachedExhibitionArtworks;
     }
 
     async associateArtworksExhibition(exhibitionId: string, artworks: ArtworkEntity[]): Promise<ExhibitionEntity> {

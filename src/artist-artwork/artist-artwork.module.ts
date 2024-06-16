@@ -5,9 +5,10 @@ import { ArtworkEntity } from '../artwork/artwork.entity/artwork.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ArtistArtworkController } from './artist-artwork.controller';
 import { ArtworkService } from '../artwork/artwork.service';
+import { CacheModule } from '@nestjs/cache-manager';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([ArtistEntity, ArtworkEntity])],
+  imports: [TypeOrmModule.forFeature([ArtistEntity, ArtworkEntity]), CacheModule.register()],
   providers: [ArtistArtworkService],
   controllers: [ArtistArtworkController]
 })

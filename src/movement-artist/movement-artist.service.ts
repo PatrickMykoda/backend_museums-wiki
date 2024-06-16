@@ -1,20 +1,26 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ArtistEntity } from '../artist/artist.entity/artist.entity';
 import { MovementEntity } from '../movement/movement.entity/movement.entity';
 import { Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from '../shared/errors/business-errors';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class MovementArtistService {
 
-    constructor(
+    cacheKey: string = "movementArtists-";
 
+    constructor(
         @InjectRepository(ArtistEntity)
         private readonly artistRepository: Repository<ArtistEntity>,
 
         @InjectRepository(MovementEntity)
-        private readonly movementRepository: Repository<MovementEntity>
+        private readonly movementRepository: Repository<MovementEntity>,
+
+        @Inject(CACHE_MANAGER)
+        private readonly cacheManager: Cache
     ){}
 
     async addArtistMovement(movementId: string, artistId: string): Promise<MovementEntity>{
@@ -48,10 +54,15 @@ export class MovementArtistService {
     }
 
     async findArtistsByMovementId(movementId:string): Promise<ArtistEntity[]> {
-        const movement: MovementEntity = await this.movementRepository.findOne({where: {id: movementId}, relations: ["artists"]});
-        if(!movement)
-            throw new BusinessLogicException("The movement with the given id was not found", BusinessError.NOT_FOUND);
-        return movement.artists;
+        const cachedArtists: ArtistEntity[] = await this.cacheManager.get<ArtistEntity[]>(this.cacheKey+movementId);
+        if(!cachedArtists){
+            const movement: MovementEntity = await this.movementRepository.findOne({where: {id: movementId}, relations: ["artists"]});
+            if(!movement)
+                throw new BusinessLogicException("The movement with the given id was not found", BusinessError.NOT_FOUND);
+            await this.cacheManager.set(this.cacheKey+movementId, movement.artists);
+            return movement.artists;
+        }
+        return cachedArtists;
     }
 
     async associateArtistsMovement(movementId: string, artists: ArtistEntity[]): Promise<MovementEntity> {

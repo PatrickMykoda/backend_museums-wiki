@@ -1,19 +1,26 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ArtworkEntity } from '../artwork/artwork.entity/artwork.entity';
 import { ImageEntity } from '../image/image.entity/image.entity';
 import { Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from '../shared/errors/business-errors';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class ArtworkImageService {
+
+    cacheKey: string = "artworkImages-";
 
     constructor(
         @InjectRepository(ArtworkEntity)
         private readonly artworkRepository: Repository<ArtworkEntity>,
 
         @InjectRepository(ImageEntity)
-        private readonly imageRepository: Repository<ImageEntity>
+        private readonly imageRepository: Repository<ImageEntity>,
+
+        @Inject(CACHE_MANAGER)
+        private readonly cacheManager: Cache
     ){}
 
     async createImageArtwork(artworkId: string, image: ImageEntity): Promise<ImageEntity>{
@@ -60,11 +67,16 @@ export class ArtworkImageService {
     }
 
     async findImagesByArtworkId(artworkId: string): Promise<ImageEntity[]> {
-        const artwork: ArtworkEntity = await this.artworkRepository.findOne({where: {id: artworkId}, relations: ["images"]});
-        if(!artwork)
-            throw new BusinessLogicException("The artwork with the given id was not found", BusinessError.NOT_FOUND);
+        const cachedImages: ImageEntity[] = await this.cacheManager.get<ImageEntity[]>(this.cacheKey+artworkId);
 
-        return artwork.images;
+        if(!cachedImages){
+            const artwork: ArtworkEntity = await this.artworkRepository.findOne({where: {id: artworkId}, relations: ["images"]});
+            if(!artwork)
+                throw new BusinessLogicException("The artwork with the given id was not found", BusinessError.NOT_FOUND);
+            await this.cacheManager.set(this.cacheKey+artworkId, artwork.images);
+            return artwork.images;
+        }
+        return cachedImages;
     }
 
     async associateImagesArtwork(artworkId: string, images: ImageEntity[]): Promise<ArtworkEntity> {

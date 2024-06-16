@@ -1,19 +1,26 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MuseumEntity } from '../museum/museum.entity/museum.entity';
 import { ExhibitionEntity } from '../exhibition/exhibition.entity/exhibition.entity';
 import { Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from '../shared/errors/business-errors';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class MuseumExhibitionService {
+
+    cacheKey: string = "museumExhibitions-";
 
     constructor(
         @InjectRepository(MuseumEntity)
         private readonly museumRepository: Repository<MuseumEntity>,
 
         @InjectRepository(ExhibitionEntity)
-        private readonly exhibitionRepository: Repository<ExhibitionEntity>
+        private readonly exhibitionRepository: Repository<ExhibitionEntity>,
+
+        @Inject(CACHE_MANAGER)
+        private readonly cacheManager: Cache
     ){}
 
     async createExhibitionMuseum(museumId: string, exhibition: ExhibitionEntity): Promise<ExhibitionEntity>{
@@ -60,10 +67,15 @@ export class MuseumExhibitionService {
     }
 
     async findExhibitionsByMuseumId(museumId:string): Promise<ExhibitionEntity[]> {
-        const museum: MuseumEntity = await this.museumRepository.findOne({where: {id: museumId}, relations: ["artworks", "exhibitions"]});
-        if (!museum)
-            throw new BusinessLogicException("The museum with the given id was not found", BusinessError.NOT_FOUND);
-        return museum.exhibitions;
+        const cachedMuseumExhibitions: ExhibitionEntity[] = await this.cacheManager.get<ExhibitionEntity[]>(this.cacheKey + museumId);
+        if(!cachedMuseumExhibitions){
+            const museum: MuseumEntity = await this.museumRepository.findOne({where: {id: museumId}, relations: ["exhibitions"]});
+            if (!museum)
+                throw new BusinessLogicException("The museum with the given id was not found", BusinessError.NOT_FOUND);
+            await this.cacheManager.set(this.cacheKey + museumId, museum.exhibitions);
+            return museum.exhibitions;
+        }
+        return cachedMuseumExhibitions;
     }
 
     async associateExhibitionsMuseum(museumId: string, exhibitions: ExhibitionEntity[]): Promise<MuseumEntity> {

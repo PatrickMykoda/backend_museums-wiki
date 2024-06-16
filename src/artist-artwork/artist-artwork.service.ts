@@ -1,19 +1,26 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ArtistEntity } from '../artist/artist.entity/artist.entity';
 import { ArtworkEntity } from '../artwork/artwork.entity/artwork.entity';
 import { Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from '../shared/errors/business-errors';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class ArtistArtworkService {
+
+    cacheKey: string = "artistArtworks-";
 
     constructor(
         @InjectRepository(ArtistEntity)
         private readonly artistRepository: Repository<ArtistEntity>,
 
         @InjectRepository(ArtworkEntity)
-        private readonly artworkRepository: Repository<ArtworkEntity>
+        private readonly artworkRepository: Repository<ArtworkEntity>,
+
+        @Inject(CACHE_MANAGER)
+        private readonly cacheManager: Cache
     ){}
 
     async createArtworkArtist(artistId: string, artwork: ArtworkEntity): Promise<ArtworkEntity>{
@@ -60,10 +67,16 @@ export class ArtistArtworkService {
     }
 
     async findArtworksByArtistId(artistId:string): Promise<ArtworkEntity[]> {
-        const artist: ArtistEntity = await this.artistRepository.findOne({where: {id: artistId}, relations: ["artworks", "movements"]});
-        if (!artist)
-            throw new BusinessLogicException("The artist with the given id was not found", BusinessError.NOT_FOUND);
-        return artist.artworks;
+        const cachedArtistArtworks: ArtworkEntity[] = await this.cacheManager.get<ArtworkEntity[]>(this.cacheKey+artistId); 
+        
+        if(!cachedArtistArtworks){
+            const artist: ArtistEntity = await this.artistRepository.findOne({where: {id: artistId}, relations: ["artworks", "movements"]});
+            if (!artist)
+                throw new BusinessLogicException("The artist with the given id was not found", BusinessError.NOT_FOUND);
+            await this.cacheManager.set(this.cacheKey+artistId, artist.artworks);
+            return artist.artworks;
+        }
+        return cachedArtistArtworks;
     }
 
     async associateArtworksArtist(artistId: string, artworks: ArtworkEntity[]): Promise<ArtistEntity> {

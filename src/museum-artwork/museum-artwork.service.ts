@@ -1,19 +1,26 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ArtworkEntity } from '../artwork/artwork.entity/artwork.entity';
 import { MuseumEntity } from '../museum/museum.entity/museum.entity';
 import { Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from '../shared/errors/business-errors';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class MuseumArtworkService {
+
+    cacheKey: string = "museumArtworks-";
 
     constructor(
         @InjectRepository(MuseumEntity)
         private readonly museumRepository: Repository<MuseumEntity>,
 
         @InjectRepository(ArtworkEntity)
-        private readonly artworkRepository: Repository<ArtworkEntity>
+        private readonly artworkRepository: Repository<ArtworkEntity>,
+
+        @Inject(CACHE_MANAGER)
+        private readonly cacheManager: Cache
     ){}
 
     async addArtworkMuseum(museumId: string, artworkId: string): Promise<MuseumEntity> {
@@ -47,10 +54,15 @@ export class MuseumArtworkService {
     }
 
     async findArtworksByMuseumId(museumId:string): Promise<ArtworkEntity[]> {
-        const museum: MuseumEntity = await this.museumRepository.findOne({where: {id: museumId}, relations: ["artworks"]});
-        if (!museum)
-            throw new BusinessLogicException("The museum with the given id was not found", BusinessError.NOT_FOUND);
-        return museum.artworks;
+        const cachedMuseumArtworks: ArtworkEntity[] = await this.cacheManager.get<ArtworkEntity[]>(this.cacheKey + museumId);
+        if(!cachedMuseumArtworks){
+            const museum: MuseumEntity = await this.museumRepository.findOne({where: {id: museumId}, relations: ["artworks"]});
+            if (!museum)
+                throw new BusinessLogicException("The museum with the given id was not found", BusinessError.NOT_FOUND);
+            await this.cacheManager.set(this.cacheKey + museumId, museum.artworks);
+            return museum.artworks;
+        }
+        return cachedMuseumArtworks;
     }
 
     async associateArtworksMuseum(museumId: string, artworks: ArtworkEntity[]): Promise<MuseumEntity> {

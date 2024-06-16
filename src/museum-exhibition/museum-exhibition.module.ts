@@ -4,9 +4,10 @@ import { ExhibitionEntity } from '../exhibition/exhibition.entity/exhibition.ent
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MuseumEntity } from '../museum/museum.entity/museum.entity';
 import { MuseumExhibitionController } from './museum-exhibition.controller';
+import { CacheModule } from '@nestjs/cache-manager';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([MuseumEntity, ExhibitionEntity])],
+  imports: [TypeOrmModule.forFeature([MuseumEntity, ExhibitionEntity]), CacheModule.register()],
   providers: [MuseumExhibitionService],
   controllers: [MuseumExhibitionController]
 })

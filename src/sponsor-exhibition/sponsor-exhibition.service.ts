@@ -1,19 +1,26 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ExhibitionEntity } from '../exhibition/exhibition.entity/exhibition.entity';
 import { SponsorEntity } from '../sponsor/sponsor.entity/sponsor.entity';
 import { Repository } from 'typeorm';
 import { BusinessError, BusinessLogicException } from '../shared/errors/business-errors';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class SponsorExhibitionService {
+
+    cacheKey: string = "sponsorExhibitions-";
 
     constructor(
         @InjectRepository(SponsorEntity)
         private readonly sponsorRepository: Repository<SponsorEntity>,
 
         @InjectRepository(ExhibitionEntity)
-        private readonly exhibitionRepository: Repository<ExhibitionEntity>
+        private readonly exhibitionRepository: Repository<ExhibitionEntity>,
+
+        @Inject(CACHE_MANAGER)
+        private readonly cacheManager: Cache
     ){}
 
     async addExhibitionSponsor(sponsorId: string, exhibitionId: string): Promise<SponsorEntity> {
@@ -47,10 +54,15 @@ export class SponsorExhibitionService {
     }
 
     async findExhibitionsBySponsorId(sponsorId:string): Promise<ExhibitionEntity[]> {
-        const sponsor: SponsorEntity = await this.sponsorRepository.findOne({where: {id: sponsorId}, relations: ["exhibitions"]});
-        if (!sponsor)
-            throw new BusinessLogicException("The sponsor with the given id was not found", BusinessError.NOT_FOUND);
-        return sponsor.exhibitions;
+        const cachedExhibitions: ExhibitionEntity[] = await this.cacheManager.get<ExhibitionEntity[]>(this.cacheKey + sponsorId);
+        if(!cachedExhibitions){
+            const sponsor: SponsorEntity = await this.sponsorRepository.findOne({where: {id: sponsorId}, relations: ["exhibitions"]});
+            if (!sponsor)
+                throw new BusinessLogicException("The sponsor with the given id was not found", BusinessError.NOT_FOUND);
+            await this.cacheManager.set(this.cacheKey + sponsorId, sponsor.exhibitions);
+            return sponsor.exhibitions;
+        }
+        return cachedExhibitions;
     }
 
     async associateExhibitionsSponsor(sponsorId: string, exhibitions: ExhibitionEntity[]): Promise<SponsorEntity> {
